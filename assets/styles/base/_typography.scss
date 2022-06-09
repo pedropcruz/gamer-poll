@@ -1,0 +1,14 @@
+@mixin font-face($family, $file, $path, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $family;
+		src: url($path + $file + '.ttf');
+		src: url($path + $file + '.ttf') format('truetype');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+@include font-face('Quicksand', 'Quicksand-Light', '~/assets/fonts/', 300);
+@include font-face('Quicksand', 'Quicksand-Regular', '~/assets/fonts/', 400);
+@include font-face('Quicksand', 'Quicksand-SemiBold', '~/assets/fonts/', 600);
+@include font-face('Quicksand', 'Quicksand-Bold', '~/assets/fonts/', 700);
